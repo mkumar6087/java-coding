@@ -1,0 +1,23 @@
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		System.out.println(checkPermutationOf2String("makWrdolHe", "HeloWrdmak"));
+	}
+	
+	public static boolean checkPermutationOf2String(String s, String s1)
+	{
+	    if(s.length()!= s1.length())
+	    {
+	        return false;
+	    }
+	        return sortString(s).equals(sortString(s1));
+    }
+    
+    public static String sortString(String s)
+    {
+        char[] c = s.toCharArray();
+        java.util.Arrays.sort(c);
+        return new String(c);
+    }
+}
